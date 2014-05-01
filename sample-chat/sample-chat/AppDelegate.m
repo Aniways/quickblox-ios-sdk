@@ -10,6 +10,8 @@
 #import "ChatRoomsViewController.h"
 #import "MainTabBarController.h"
 
+#import <Aniways/AWInit.h>
+
 @implementation AppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
@@ -20,6 +22,7 @@
     [QBSettings setAuthorizationKey:@"wJHdOcQSxXQGWx5"];
     [QBSettings setAuthorizationSecret:@"BTFsj7Rtt27DAmT"];
     
+    [AWInit initAniwaysWithAppId:@"demoApp"];
     UITabBarController *tabBarController = (UITabBarController *)self.window.rootViewController;
     tabBarController.delegate = self;
 

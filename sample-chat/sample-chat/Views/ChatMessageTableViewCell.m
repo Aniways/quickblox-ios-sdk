@@ -8,6 +8,7 @@
 
 #import "ChatMessageTableViewCell.h"
 
+
 #define padding 20
 
 @implementation ChatMessageTableViewCell
@@ -72,7 +73,7 @@ static UIImage *aquaBubble;
         [self.backgroundImageView setFrame:CGRectZero];
 		[self.contentView addSubview:self.backgroundImageView];
         
-		self.messageTextView = [[UITextView alloc] init];
+		self.messageTextView = [[AWTextViewLabel alloc] init];
         [self.messageTextView setBackgroundColor:[UIColor clearColor]];
         [self.messageTextView setEditable:NO];
         [self.messageTextView setScrollEnabled:NO];

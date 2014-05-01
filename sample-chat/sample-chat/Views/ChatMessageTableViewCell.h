@@ -7,10 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <Aniways/AWTextViewLabel.h>
 
 @interface ChatMessageTableViewCell : UITableViewCell
 
-@property (nonatomic, strong) UITextView  *messageTextView;
+@property (nonatomic, strong) AWTextViewLabel  *messageTextView;
 @property (nonatomic, strong) UILabel     *dateLabel;
 @property (nonatomic, strong) UIImageView *backgroundImageView;
 

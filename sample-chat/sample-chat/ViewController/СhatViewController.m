@@ -8,11 +8,13 @@
 
 #import "СhatViewController.h"
 #import "ChatMessageTableViewCell.h"
+#import <Aniways/AWTextView.h>
 
 @interface ChatViewController () <UITableViewDelegate, UITableViewDataSource>
 
 @property (nonatomic, strong) NSMutableArray *messages;
-@property (nonatomic, weak) IBOutlet UITextField *messageTextField;
+@property (nonatomic, weak) IBOutlet UIView *chatInputWrapperView;
+@property (nonatomic, weak) IBOutlet AWTextView *messageTextField;
 @property (nonatomic, weak) IBOutlet UIButton *sendMessageButton;
 @property (nonatomic, weak) IBOutlet UITableView *messagesTableView;
 
@@ -205,8 +207,8 @@
 - (void)keyboardWillShow:(NSNotification *)note
 {
     [UIView animateWithDuration:0.3 animations:^{
-		self.messageTextField.transform = CGAffineTransformMakeTranslation(0, -215);
-        self.sendMessageButton.transform = CGAffineTransformMakeTranslation(0, -215);
+		self.chatInputWrapperView.transform = CGAffineTransformMakeTranslation(0, -215);
+//        self.sendMessageButton.transform = CGAffineTransformMakeTranslation(0, -215);
         self.messagesTableView.frame = CGRectMake(self.messagesTableView.frame.origin.x,
                                                   self.messagesTableView.frame.origin.y,
                                                   self.messagesTableView.frame.size.width,
@@ -217,8 +219,8 @@
 - (void)keyboardWillHide:(NSNotification *)note
 {
     [UIView animateWithDuration:0.3 animations:^{
-		self.messageTextField.transform = CGAffineTransformIdentity;
-        self.sendMessageButton.transform = CGAffineTransformIdentity;
+		self.chatInputWrapperView.transform = CGAffineTransformIdentity;
+//        self.sendMessageButton.transform = CGAffineTransformIdentity;
         self.messagesTableView.frame = CGRectMake(self.messagesTableView.frame.origin.x,
                                                   self.messagesTableView.frame.origin.y,
                                                   self.messagesTableView.frame.size.width,
