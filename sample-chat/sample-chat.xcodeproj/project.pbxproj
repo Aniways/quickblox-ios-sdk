@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		81CB5DB8A75844A2ADB2EDA7 /* libPods-sample-chat.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A634B0DB632A4DD9BCAE7B09 /* libPods-sample-chat.a */; };
 		BFB4627C18150EB00010AE49 /* ChatService.m in Sources */ = {isa = PBXBuildFile; fileRef = BFB4627B18150EB00010AE49 /* ChatService.m */; };
 		BFBD3C941832CF30009D090B /* sound.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = BFBD3C931832CF30009D090B /* sound.mp3 */; };
 		BFBD3C961832CFAF009D090B /* Quickblox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BFBD3C951832CFAF009D090B /* Quickblox.framework */; };
@@ -59,6 +60,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		A634B0DB632A4DD9BCAE7B09 /* libPods-sample-chat.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-sample-chat.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BFB4627A18150EB00010AE49 /* ChatService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChatService.h; sourceTree = "<group>"; };
 		BFB4627B18150EB00010AE49 /* ChatService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChatService.m; sourceTree = "<group>"; };
 		BFBD3C931832CF30009D090B /* sound.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = sound.mp3; sourceTree = "<group>"; };
@@ -114,6 +116,7 @@
 		BFE6FBF018118BDC00E64AC4 /* СhatViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "СhatViewController.m"; sourceTree = "<group>"; };
 		BFE6FBF31812E0F800E64AC4 /* ChatMessageTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChatMessageTableViewCell.h; sourceTree = "<group>"; };
 		BFE6FBF41812E0F800E64AC4 /* ChatMessageTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChatMessageTableViewCell.m; sourceTree = "<group>"; };
+		F87966CDBADB4A06B56D8C76 /* Pods-sample-chat.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-sample-chat.xcconfig"; path = "Pods/Pods-sample-chat.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -138,6 +141,7 @@
 				BFE6FBB0180E9E5300E64AC4 /* CFNetwork.framework in Frameworks */,
 				BFE6FB7A180E8EF100E64AC4 /* UIKit.framework in Frameworks */,
 				BFE6FB76180E8EF100E64AC4 /* Foundation.framework in Frameworks */,
+				81CB5DB8A75844A2ADB2EDA7 /* libPods-sample-chat.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -160,6 +164,7 @@
 				BFE6FB7B180E8EF100E64AC4 /* sample-chat */,
 				BFE6FB74180E8EF100E64AC4 /* Frameworks */,
 				BFE6FB73180E8EF100E64AC4 /* Products */,
+				F87966CDBADB4A06B56D8C76 /* Pods-sample-chat.xcconfig */,
 			);
 			sourceTree = "<group>";
 		};
@@ -193,6 +198,7 @@
 				BFE6FB77180E8EF100E64AC4 /* CoreGraphics.framework */,
 				BFE6FB79180E8EF100E64AC4 /* UIKit.framework */,
 				BFE6FB97180E8EF100E64AC4 /* XCTest.framework */,
+				A634B0DB632A4DD9BCAE7B09 /* libPods-sample-chat.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -302,9 +308,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = BFE6FBA7180E8EF100E64AC4 /* Build configuration list for PBXNativeTarget "sample-chat" */;
 			buildPhases = (
+				D84C241BDAD6462B96E116D6 /* Check Pods Manifest.lock */,
 				BFE6FB6E180E8EF100E64AC4 /* Sources */,
 				BFE6FB6F180E8EF100E64AC4 /* Frameworks */,
 				BFE6FB70180E8EF100E64AC4 /* Resources */,
+				45F690E667A54E2E8A52EA4D /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -389,6 +397,39 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		45F690E667A54E2E8A52EA4D /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Pods-sample-chat-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D84C241BDAD6462B96E116D6 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		BFE6FB6E180E8EF100E64AC4 /* Sources */ = {
@@ -524,6 +565,7 @@
 		};
 		BFE6FBA8180E8EF100E64AC4 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F87966CDBADB4A06B56D8C76 /* Pods-sample-chat.xcconfig */;
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD)";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -542,6 +584,37 @@
 					"-lstdc++",
 					"-ObjC",
 					"-lxml2",
+					"-lz",
+					"-framework",
+					AVFoundation,
+					"-framework",
+					Accelerate,
+					"-framework",
+					AdSupport,
+					"-framework",
+					Aniways,
+					"-framework",
+					CFNetwork,
+					"-framework",
+					CoreData,
+					"-framework",
+					CoreGraphics,
+					"-framework",
+					CoreLocation,
+					"-framework",
+					CoreTelephony,
+					"-framework",
+					Foundation,
+					"-framework",
+					MobileCoreServices,
+					"-framework",
+					QuartzCore,
+					"-framework",
+					StoreKit,
+					"-framework",
+					SystemConfiguration,
+					"-framework",
+					UIKit,
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
@@ -550,6 +623,7 @@
 		};
 		BFE6FBA9180E8EF100E64AC4 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F87966CDBADB4A06B56D8C76 /* Pods-sample-chat.xcconfig */;
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD)";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -568,6 +642,37 @@
 					"-lstdc++",
 					"-ObjC",
 					"-lxml2",
+					"-lz",
+					"-framework",
+					AVFoundation,
+					"-framework",
+					Accelerate,
+					"-framework",
+					AdSupport,
+					"-framework",
+					Aniways,
+					"-framework",
+					CFNetwork,
+					"-framework",
+					CoreData,
+					"-framework",
+					CoreGraphics,
+					"-framework",
+					CoreLocation,
+					"-framework",
+					CoreTelephony,
+					"-framework",
+					Foundation,
+					"-framework",
+					MobileCoreServices,
+					"-framework",
+					QuartzCore,
+					"-framework",
+					StoreKit,
+					"-framework",
+					SystemConfiguration,
+					"-framework",
+					UIKit,
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;

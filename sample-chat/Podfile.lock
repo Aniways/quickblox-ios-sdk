@@ -1,0 +1,10 @@
+PODS:
+  - Aniways (2.2)
+
+DEPENDENCIES:
+  - Aniways
+
+SPEC CHECKSUMS:
+  Aniways: 297009afb75b62fef0aac3f32e2c7c2b1086efb1
+
+COCOAPODS: 0.32.1
