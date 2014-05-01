@@ -9,12 +9,13 @@
 #import "СhatViewController.h"
 #import "ChatMessageTableViewCell.h"
 #import <Aniways/AWTextView.h>
+#import <HPGrowingTextView/HPGrowingTextView.h>
 
-@interface ChatViewController () <UITableViewDelegate, UITableViewDataSource>
+@interface ChatViewController () <UITableViewDelegate, UITableViewDataSource, HPGrowingTextViewDelegate>
 
 @property (nonatomic, strong) NSMutableArray *messages;
 @property (nonatomic, weak) IBOutlet UIView *chatInputWrapperView;
-@property (nonatomic, weak) IBOutlet AWTextView *messageTextField;
+@property (nonatomic, weak) IBOutlet HPGrowingTextView *messageTextField;
 @property (nonatomic, weak) IBOutlet UIButton *sendMessageButton;
 @property (nonatomic, weak) IBOutlet UITableView *messagesTableView;
 
@@ -28,6 +29,8 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
+    
+    [self setUpGrowingTextView];
     
     if(self.opponent != nil){
         self.messages = [[LocalStorageService shared] messageHistoryWithUserID:self.opponent.ID];
@@ -208,7 +211,6 @@
 {
     [UIView animateWithDuration:0.3 animations:^{
 		self.chatInputWrapperView.transform = CGAffineTransformMakeTranslation(0, -215);
-//        self.sendMessageButton.transform = CGAffineTransformMakeTranslation(0, -215);
         self.messagesTableView.frame = CGRectMake(self.messagesTableView.frame.origin.x,
                                                   self.messagesTableView.frame.origin.y,
                                                   self.messagesTableView.frame.size.width,
@@ -220,12 +222,36 @@
 {
     [UIView animateWithDuration:0.3 animations:^{
 		self.chatInputWrapperView.transform = CGAffineTransformIdentity;
-//        self.sendMessageButton.transform = CGAffineTransformIdentity;
         self.messagesTableView.frame = CGRectMake(self.messagesTableView.frame.origin.x,
                                                   self.messagesTableView.frame.origin.y,
                                                   self.messagesTableView.frame.size.width,
                                                   self.messagesTableView.frame.size.height+219);
     }];
+}
+
+#pragma mark - HPGrowingTextView Delegate Impl
+
+- (void)growingTextView:(HPGrowingTextView *)growingTextView willChangeHeight:(float)height
+{
+    float diff = (growingTextView.frame.size.height - height);
+    
+	CGRect r = self.chatInputWrapperView.frame;
+    r.size.height -= diff;
+    r.origin.y += diff;
+	self.chatInputWrapperView.frame = r;
+}
+
+
+#pragma mark - Private
+-(void)setUpGrowingTextView
+{
+    self.messageTextField.delegate = self;
+    self.messageTextField.minNumberOfLines = 1;
+    self.messageTextField.maxNumberOfLines = 6;
+    self.messageTextField.returnKeyType = UIReturnKeyGo; //just as an example
+    self.messageTextField.font = [UIFont systemFontOfSize:15.0f];
+    self.messageTextField.internalTextView.scrollIndicatorInsets = UIEdgeInsetsMake(5, 0, 5, 0);
+    self.messageTextField.placeholder = @"Message";
 }
 
 @end

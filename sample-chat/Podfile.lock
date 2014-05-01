@@ -1,10 +1,13 @@
 PODS:
   - Aniways (2.2)
+  - HPGrowingTextView (1.1)
 
 DEPENDENCIES:
   - Aniways
+  - HPGrowingTextView
 
 SPEC CHECKSUMS:
   Aniways: 297009afb75b62fef0aac3f32e2c7c2b1086efb1
+  HPGrowingTextView: 4318f557b33c19def1c53ec275d6e2a2d6589cd0
 
 COCOAPODS: 0.32.1

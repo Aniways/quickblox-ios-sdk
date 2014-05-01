@@ -171,13 +171,11 @@
                                             <action selector="sendMessage:" destination="1Ve-9p-jH0" eventType="touchUpInside" id="pUO-aG-fw8"/>
                                         </connections>
                                     </button>
-                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="3dX-Op-9Gc" customClass="AWTextView">
-                                        <rect key="frame" x="9" y="5" width="240" height="30"/>
+                                    <view contentMode="scaleToFill" id="MeR-M8-bdN" customClass="HPGrowingTextView">
+                                        <rect key="frame" x="8" y="6" width="251" height="27"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                                    </textView>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                    </view>
                                 </subviews>
                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
@@ -188,7 +186,7 @@
                     <nil key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="chatInputWrapperView" destination="dJU-Vz-BoR" id="xW8-2S-a0L"/>
-                        <outlet property="messageTextField" destination="3dX-Op-9Gc" id="IO9-V1-W9K"/>
+                        <outlet property="messageTextField" destination="MeR-M8-bdN" id="Ckc-uD-n91"/>
                         <outlet property="messagesTableView" destination="flv-5D-kL4" id="Vm8-hQ-RL8"/>
                         <outlet property="sendMessageButton" destination="cPB-9T-Lvs" id="EHt-AM-6PQ"/>
                     </connections>
